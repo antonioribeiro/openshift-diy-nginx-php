@@ -52,7 +52,7 @@ function install_libmcrypt() {
     pushd ${BUILD_DIR}
 
     echo "Downloading ${pkg}."
-    wget "http://sourceforge.net/projects/mcrypt/files/Libmcrypt/${LIBMCRYPT_VERSION}/${pkg}/download?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fmcrypt%2F&ts=${ts}&use_mirror=freefr"
+    wget --output-document=./${pkg} "http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/Production/${pkg}?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fmcrypt%2Ffiles%2FLibmcrypt%2FProduction%2F&ts=1370479253&use_mirror=tenet"
 
     echo "Unpacking ${pkg}."
     tar xfz ${pkg}
@@ -101,7 +101,7 @@ function install_php() {
     pushd ${BUILD_DIR}
 
     echo "Downloading ${pkg}."
-    wget http://www.php.net/get/${pkg}/from/us1.php.net/mirror
+    wget --output-document=./${pkg} http://www.php.net/get/${pkg}/from/us1.php.net/mirror
 
     echo "Unpacking ${pkg}."
     tar xfz ${pkg}
