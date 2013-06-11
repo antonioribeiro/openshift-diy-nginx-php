@@ -1,5 +1,9 @@
 #!/bin/bash
 function install_nginx() {
+    echo "installing nginx..."
+
+    set -x
+    
     local pkg=nginx-${NGINX_VERSION}.tar.gz
     local pkg_pcre=pcre-${PCRE_VERSION}.tar.bz2
     local pkg_zlib=zlib-${ZLIB_VERSION}.tar.gz
